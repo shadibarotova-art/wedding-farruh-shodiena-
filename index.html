@@ -18,294 +18,241 @@
             background: linear-gradient(135deg, #fef9f3 0%, #fcf4e9 100%);
             color: #5a4c3e;
             line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        /* Главный контейнер */
-        .wedding-container {
-            max-width: 1200px;
-            margin: 30px auto;
-            background: white;
-            box-shadow: 0 20px 60px rgba(139, 107, 77, 0.1);
-            border-radius: 25px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        /* Герой-секция */
-        .hero-section {
-            position: relative;
-            height: 80vh;
-            min-height: 650px;
-            background: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.15)), 
-                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            text-align: center;
-            color: white;
+            align-items: center;
+            padding: 20px;
         }
 
-        .hero-overlay {
-            background: rgba(139, 107, 77, 0.85);
-            padding: 70px 50px;
-            border-radius: 25px;
-            backdrop-filter: blur(12px);
-            max-width: 850px;
-            margin: 0 20px;
-            border: 3px solid rgba(255,255,255,0.25);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-        }
-
-        .main-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 6.5em;
-            font-weight: normal;
-            margin-bottom: 25px;
-            color: #fff;
-            text-shadow: 3px 3px 15px rgba(0,0,0,0.4);
-            line-height: 1.1;
-            letter-spacing: 2px;
-        }
-
-        .subtitle {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2em;
-            font-weight: 300;
-            letter-spacing: 4px;
-            margin-bottom: 50px;
-            text-transform: uppercase;
-            opacity: 0.95;
-            padding-bottom: 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-        }
-
-        /* Информационная панель */
-        .info-panel {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-            padding: 70px 40px;
-            background: #f9f3ec;
-            border-bottom: 1px solid #e8d9c8;
-        }
-
-        .info-card {
-            text-align: center;
-            padding: 35px 25px;
+        /* Главная карточка */
+        .invitation-card {
+            max-width: 900px;
+            width: 100%;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.07);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 2px solid transparent;
+            border-radius: 30px;
+            box-shadow: 0 25px 70px rgba(139, 107, 77, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Верхний декоративный элемент */
+        .card-header {
+            background: linear-gradient(135deg, #8b6b4d 0%, #a1887f 100%);
+            padding: 60px 40px;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .info-card:before {
+        .card-header:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #b8866b, #8b6b4d);
+            background: linear-gradient(90deg, #f5e9d9, #b8866b, #f5e9d9);
         }
 
-        .info-card:hover {
-            transform: translateY(-12px);
-            border-color: #b8866b;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+        .names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5.5em;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+            letter-spacing: 2px;
         }
 
-        .info-card i {
-            font-size: 3em;
-            color: #b8866b;
-            margin-bottom: 25px;
-            transition: transform 0.3s;
-        }
-
-        .info-card:hover i {
-            transform: scale(1.15);
-        }
-
-        .info-card h3 {
+        .subtitle {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8em;
-            color: #8b6b4d;
+            color: rgba(255,255,255,0.95);
+            font-weight: 300;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Основное содержание */
+        .card-content {
+            padding: 70px 50px;
+            text-align: center;
+        }
+
+        /* Информационные блоки */
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        .info-block {
+            padding: 35px 25px;
+            background: #f9f3ec;
+            border-radius: 20px;
+            border-left: 5px solid #b8866b;
+            transition: all 0.3s;
+            text-align: left;
+        }
+
+        .info-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .info-icon {
+            font-size: 2.5em;
+            color: #b8866b;
             margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .info-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7em;
+            color: #8b6b4d;
+            margin-bottom: 15px;
             font-weight: 600;
         }
 
-        .info-card p {
-            font-size: 1.15em;
+        .info-text {
+            font-size: 1.2em;
             color: #7a6248;
             line-height: 1.8;
         }
 
-        /* Фотогалерея */
-        .gallery-section {
-            padding: 90px 40px;
-            background: white;
+        /* Детали свадьбы */
+        .wedding-details {
+            background: linear-gradient(135deg, #f5ede3 0%, #f0e6d8 100%);
+            padding: 50px 40px;
+            border-radius: 25px;
+            margin: 50px 0;
+            border: 2px dashed #d7b899;
         }
 
-        .section-title {
-            text-align: center;
+        .details-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4em;
+            font-size: 2.8em;
             color: #8b6b4d;
-            margin-bottom: 70px;
+            margin-bottom: 40px;
+            text-align: center;
             position: relative;
-            font-weight: 600;
-        }
-
-        .section-title:after {
-            content: '❧';
-            position: absolute;
-            color: #b8866b;
-            font-size: 2.5em;
-            bottom: -45px;
+            display: inline-block;
             left: 50%;
             transform: translateX(-50%);
         }
 
-        .photo-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 60px;
-        }
-
-        .photo-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 25px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-            height: 400px;
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .photo-item:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 35px 65px rgba(0,0,0,0.18);
-        }
-
-        .photo-img {
+        .details-title:after {
+            content: '';
+            position: absolute;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s;
-        }
-
-        .photo-item:hover .photo-img {
-            transform: scale(1.12);
-        }
-
-        .photo-overlay {
-            position: absolute;
-            bottom: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b8866b, transparent);
+            bottom: -15px;
             left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0,0,0,0.85));
-            color: white;
-            padding: 35px 30px;
-            transform: translateY(100%);
-            transition: transform 0.5s;
         }
 
-        .photo-item:hover .photo-overlay {
-            transform: translateY(0);
-        }
-
-        .photo-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            color: #f5e9d9;
-        }
-
-        .photo-desc {
-            font-size: 1.1em;
-            opacity: 0.9;
-            font-style: italic;
-        }
-
-        /* Цитата */
-        .quote-section {
-            padding: 100px 40px;
-            background: linear-gradient(135deg, #f9f3ec 0%, #f5ede3 100%);
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             text-align: center;
-            border-top: 1px solid #e8d9c8;
-            border-bottom: 1px solid #e8d9c8;
         }
 
-        .quote {
+        .detail-item {
+            padding: 25px 20px;
+        }
+
+        .detail-label {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.8em;
+            font-size: 1.3em;
+            color: #a1887f;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .detail-value {
+            font-size: 1.8em;
             color: #8b6b4d;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
-            font-weight: 300;
-            position: relative;
-            padding: 0 40px;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
-        .quote:before, .quote:after {
-            content: '"';
-            font-size: 3em;
-            color: #b8866b;
-            position: absolute;
-            opacity: 0.5;
+        /* Призыв к действию */
+        .action-section {
+            padding: 50px 40px;
+            background: #fff;
+            border-top: 1px solid #e8d9c8;
+            text-align: center;
         }
 
-        .quote:before {
-            left: 0;
-            top: -20px;
+        .action-text {
+            font-size: 1.3em;
+            color: #7a6248;
+            margin-bottom: 35px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
         }
 
-        .quote:after {
-            right: 0;
-            bottom: -40px;
+        .rsvp-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: linear-gradient(135deg, #b8866b 0%, #8b6b4d 100%);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3em;
+            text-decoration: none;
+            border-radius: 60px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+            box-shadow: 0 10px 30px rgba(184, 134, 107, 0.3);
+        }
+
+        .rsvp-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(184, 134, 107, 0.4);
         }
 
         /* Футер */
-        .footer {
-            padding: 60px 40px;
+        .card-footer {
+            padding: 50px 40px;
             background: #8b6b4d;
             color: #f5e9d9;
             text-align: center;
             position: relative;
         }
 
-        .footer:before {
+        .card-footer:before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #b8866b, transparent);
+            background: linear-gradient(90deg, transparent, #f5e9d9, transparent);
         }
 
-        .footer-title {
+        .closing-message {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            color: #fff;
-            font-weight: 500;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
 
-        .footer-dates {
+        .signature {
             font-size: 1.8em;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        .footer-location {
-            font-size: 1.3em;
-            opacity: 0.9;
-            margin-bottom: 40px;
+            margin-top: 30px;
+            color: white;
+            font-weight: 500;
         }
 
         .heart {
@@ -320,20 +267,185 @@
             50% { transform: scale(1.2); }
         }
 
+        /* Орнаменты и украшения */
+        .ornament {
+            position: absolute;
+            color: rgba(184, 134, 107, 0.15);
+            font-size: 8em;
+            z-index: 0;
+        }
+
+        .ornament-1 { top: 30px; left: 30px; }
+        .ornament-2 { bottom: 30px; right: 30px; transform: rotate(180deg); }
+
         /* Адаптивность */
         @media (max-width: 768px) {
-            .main-title { font-size: 4.5em; }
-            .subtitle { font-size: 1.5em; letter-spacing: 2px; }
-            .section-title { font-size: 3em; }
-            .quote { font-size: 2em; padding: 0 20px; }
-            .hero-section { height: 70vh; min-height: 500px; }
-            .hero-overlay { padding: 40px 25px; }
-            .photo-gallery { grid-template-columns: 1fr; }
-            .info-panel { grid-template-columns: 1fr; gap: 25px; }
+            .names { font-size: 4em; }
+            .subtitle { font-size: 1.4em; letter-spacing: 2px; }
+            .card-content { padding: 40px 25px; }
+            .details-title { font-size: 2.2em; }
+            .info-section { grid-template-columns: 1fr; }
+            .details-grid { grid-template-columns: 1fr; }
+            .ornament { display: none; }
         }
 
         @media (max-width: 480px) {
-            .main-title { font-size: 3.5em; }
-            .section-title { font-size: 2.5em; }
-            .photo-item { height: 320px; }
-            .info-card { padding
+            .names { font-size: 3.2em; }
+            .card-header { padding: 40px 25px; }
+            .info-block { padding: 25px 20px; }
+            .rsvp-button { padding: 18px 35px; font-size: 1.1em; }
+            .closing-message { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <!-- Декоративные орнаменты -->
+        <div class="ornament ornament-1">❦</div>
+        <div class="ornament ornament-2">❦</div>
+        
+        <!-- Шапка с именами -->
+        <div class="card-header">
+            <h1 class="names">Farruh & Shodiena</h1>
+            <p class="subtitle">Приглашают вас на свою свадьбу</p>
+        </div>
+        
+        <!-- Основное содержание -->
+        <div class="card-content">
+            <!-- Информационные блоки -->
+            <div class="info-section">
+                <div class="info-block">
+                    <div class="info-icon">📅</div>
+                    <h3 class="info-title">Даты празднования</h3>
+                    <p class="info-text">18 — 19 июня 2026 года<br>Два дня незабываемого торжества</p>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-icon">📍</div>
+                    <h3 class="info-title">Место проведения</h3>
+                    <p class="info-text">г. Оренбург<br>Ресторан «Lion»<br><em>Беляевское шоссе, 38</em></p>
+                </div>
+                
+                <div class="info-block">
+                    <div class="info-icon">⏰</div>
+                    <h3 class="info-title">Время начала</h3>
+                    <p class="info-text">18:00<br>Пожалуйста, приходите вовремя</p>
+                </div>
+            </div>
+            
+            <!-- Детали свадьбы -->
+            <div class="wedding-details">
+                <h2 class="details-title">Детали свадьбы</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <div class="detail-label">День первый</div>
+                        <div class="detail-value">18 июня</div>
+                        <div style="color: #a1887f; margin-top: 8px;">Торжественная церемония</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">День второй</div>
+                        <div class="detail-value">19 июня</div>
+                        <div style="color: #a1887f; margin-top: 8px;">Праздничный банкет</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Начало</div>
+                        <div class="detail-value">18:00</div>
+                        <div style="color: #a1887f; margin-top: 8px;">Сбор гостей</div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <div class="detail-label">Дресс-код</div>
+                        <div class="detail-value">Вечерний</div>
+                        <div style="color: #a1887f; margin-top: 8px;">Элегантные наряды</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Программа дня -->
+            <div style="text-align: left; max-width: 700px; margin: 0 auto 50px;">
+                <h2 style="font-family: 'Cormorant Garamond', serif; color: #8b6b4d; font-size: 2.5em; margin-bottom: 35px; text-align: center;">Программа дня</h2>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; padding: 20px; background: #f9f3ec; border-radius: 15px; border-left: 4px solid #b8866b;">
+                    <div style="background: #8b6b4d; color: white; padding: 10px 20px; border-radius: 10px; font-weight: bold; min-width: 100px; text-align: center; margin-right: 25px;">
+                        18:00
+                    </div>
+                    <div>
+                        <h3 style="color: #8b6b4d; margin-bottom: 8px; font-size: 1.4em;">Сбор гостей</h3>
+                        <p>Приветственный фуршет, знакомство</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; padding: 20px; background: #f9f3ec; border-radius: 15px; border-left: 4px solid #b8866b;">
+                    <div style="background: #8b6b4d; color: white; padding: 10px 20px; border-radius: 10px; font-weight: bold; min-width: 100px; text-align: center; margin-right: 25px;">
+                        19:30
+                    </div>
+                    <div>
+                        <h3 style="color: #8b6b4d; margin-bottom: 8px; font-size: 1.4em;">Церемония</h3>
+                        <p>Торжественное бракосочетание</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: flex-start; margin-bottom: 25px; padding: 20px; background: #f9f3ec; border-radius: 15px; border-left: 4px solid #b8866b;">
+                    <div style="background: #8b6b4d; color: white; padding: 10px 20px; border-radius: 10px; font-weight: bold; min-width: 100px; text-align: center; margin-right: 25px;">
+                        20:30
+                    </div>
+                    <div>
+                        <h3 style="color: #8b6b4d; margin-bottom: 8px; font-size: 1.4em;">Банкет</h3>
+                        <p>Свадебный ужин, тосты, поздравления</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Призыв к действию -->
+            <div class="action-section">
+                <p class="action-text">
+                    Ваше присутствие сделает наш день по-настоящему особенным. 
+                    Пожалуйста, подтвердите своё участие до 1 июня 2026 года.
+                </p>
+                
+                <button class="rsvp-button" onclick="location.href='mailto:example@email.com?subject=Подтверждение на свадьбу Farruh и Shodiena&body=Здравствуйте! Я подтверждаю своё участие.%0D%0A%0D%0AИмя:%0D%0AКоличество гостей:%0D%0AПожелания:%0D%0A%0D%0A'">
+                    <i class="fas fa-reply"></i> Подтвердить участие
+                </button>
+            </div>
+        </div>
+        
+        <!-- Футер -->
+        <div class="card-footer">
+            <p class="closing-message">
+                Мы с нетерпением ждём встречи с вами в этот особенный день нашей жизни
+            </p>
+            <p class="signature">
+                С любовью, Farruh <span class="heart">❤</span> Shodiena
+            </p>
+            <p style="margin-top: 40px; opacity: 0.8; font-size: 0.9em;">
+                Свадебное приглашение • Июнь 2026 • Оренбург
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Простая интерактивность для кнопки
+        document.querySelector('.rsvp-button').addEventListener('click', function() {
+            this.innerHTML = '<i class="fas fa-check"></i> Спасибо за ответ!';
+            this.style.background = 'linear-gradient(135deg, #7a6248 0%, #5d4037 100%)';
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-reply"></i> Подтвердить участие';
+                this.style.background = 'linear-gradient(135deg, #b8866b 0%, #8b6b4d 100%)';
+            }, 3000);
+        });
+        
+        // Анимация появления элементов
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.info-block, .detail-item');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
